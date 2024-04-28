@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark light</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" >
+    <h1>Dark/Light Theme Switcher</h1>
+<div>
+   
+    <img src="darkmode.png"   class="icon active" id="dark-img" onclick="darkMode()">
+    <img src="img/lightmode1.png"    class="icon active"  id="light-img" onclick="lightMode()" >
+
+    <p class="Mode-desc">
+        Light mode refers to the default setting on most devices where the background is light, <br>
+        usually white, and the text is dark. On the contrary, dark mode flips this design,<br> 
+        offering a dark background, often black or dark gray, with light text.
+    </p>
+    </p>
+
+</div>
+<script>
+    function darkMode(){
+        const imgDark= document.getElementById("dark-img");
+        imgDark.classList.add("active");
+
+        const imgLight= document.getElementById("light-img");
+        imgLight.classList.remove("active");
+
+        const bodyElement= document.getElementById("body");
+        bodyElement.className = "theme-dark";
+    }
+
+    function lightMode(){
+        const imgDark= document.getElementById("dark-img");
+        imgDark.classList.remove("active");
+
+        const imgLight= document.getElementById("light-img");
+        imgLight.classList.add("active");
+
+        const bodyElement= document.getElementById("body");
+        bodyElement.className = "theme-light";
+
+    }
+</script>
+
+
+
+</body>
+</html>
